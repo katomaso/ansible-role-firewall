@@ -3,10 +3,10 @@
   include_tasks: prepare.yml
   when: firewall_group == "default"
 
-- name: Install firewall profile {{firewall_group}}
+- name: Install firewall profile {{ firewall_group }}
   include_tasks: install.yml
   when: firewall_remove is falsy
 
-- name: Remove firewall profile {{firewall_group}}
+- name: Remove firewall profile {{ firewall_group }}
   include_tasks: remove.yml
   when: firewall_remove is truthy

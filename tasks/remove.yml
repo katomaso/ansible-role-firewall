@@ -1,5 +1,5 @@
 ---
-- name: Remove firewall IPv4 {{firewall_group}} profile.
+- name: Remove firewall IPv4 {{ firewall_group }} profile.
   file:
     state: absent
     path: /etc/firewall.bash.d/ipv4.{{firewall_group}}.bash
@@ -7,7 +7,7 @@
   - Restart firewall
   - Restart docker
 
-- name: Remove firewall IPv6 {{firewall_group}} profile.
+- name: Remove firewall IPv6 {{ firewall_group }} profile.
   file:
     state: absent
     path: /etc/firewall.bash.d/ipv6.{{firewall_group}}.bash
